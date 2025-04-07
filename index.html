@@ -1,14 +1,31 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>KriptoGöçer Mini Oyun</title>
-  <style>
-    body { font-family: sans-serif; text-align: center; margin-top: 100px; }
-    button { padding: 10px 20px; font-size: 20px; }
-  </style>
-</head>
-<body>
-  <h1>🎮 KriptoGöçer Mini Oyun</h1>
-  <button onclick="alert('Kazandın! 🎉')">Tıkla ve Kazan</button>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <title>KriptoGöçer Mini Oyun</title>
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        text-align: center;
+        margin-top: 50px;
+      }
+      button {
+        padding: 10px 20px;
+        font-size: 16px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>🎮 KriptoGöçer Mini Oyun</h1>
+    <button onclick="sendResult()">Tıkla ve Kazan</button>
+
+    <script>
+      function sendResult() {
+        Telegram.WebApp.sendData("clicked"); // Bu veriyi bota gönderiyoruz
+        Telegram.WebApp.close(); // Oyunu kapat
+      }
+    </script>
+  </body>
 </html>
+
